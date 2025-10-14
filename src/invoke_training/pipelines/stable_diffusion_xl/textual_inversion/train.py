@@ -106,13 +106,11 @@ def _initialize_placeholder_tokens(
     """
 
     if (
-        sum(
-            [
-                getattr(config, "initializer_token", None) is not None,
-                getattr(config, "initial_embedding_file", None) is not None,
-                getattr(config, "initial_phrase", None) is not None,
-            ]
-        )
+        sum([
+            getattr(config, "initializer_token", None) is not None,
+            getattr(config, "initial_embedding_file", None) is not None,
+            getattr(config, "initial_phrase", None) is not None,
+        ])
         != 1
     ):
         raise ValueError(

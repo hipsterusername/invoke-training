@@ -90,13 +90,11 @@ def _initialize_placeholder_tokens(
     - Initialize the new token embeddings from either an existing token, or an initial TI embedding file.
     """
     if (
-        sum(
-            [
-                config.initializer_token is not None,
-                config.initial_embedding_file is not None,
-                config.initial_phrase is not None,
-            ]
-        )
+        sum([
+            config.initializer_token is not None,
+            config.initial_embedding_file is not None,
+            config.initial_phrase is not None,
+        ])
         != 1
     ):
         raise ValueError(
