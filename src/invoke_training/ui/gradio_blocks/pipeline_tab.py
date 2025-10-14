@@ -140,11 +140,13 @@ class PipelineTab:
             # (in case some values were rounded or otherwise modified
             # in the process).
             update_dict = self.pipeline_config_group.update_ui_components_with_config_data(self._current_config)
-            update_dict.update({
-                self._config_yaml: yaml.safe_dump(
-                    self._current_config.model_dump(), default_flow_style=False, sort_keys=False
-                )
-            })
+            update_dict.update(
+                {
+                    self._config_yaml: yaml.safe_dump(
+                        self._current_config.model_dump(), default_flow_style=False, sort_keys=False
+                    )
+                }
+            )
             return update_dict
         except Exception as e:
             print(f"Error generating config: {e}")

@@ -254,9 +254,9 @@ def train_forward(  # noqa: C901
         add_time_ids = add_time_ids.to(accelerator.device, dtype=weight_dtype)
         return add_time_ids
 
-    add_time_ids = torch.cat([
-        compute_time_ids(s, c) for s, c in zip(data_batch["original_size_hw"], data_batch["crop_top_left_yx"])
-    ])
+    add_time_ids = torch.cat(
+        [compute_time_ids(s, c) for s, c in zip(data_batch["original_size_hw"], data_batch["crop_top_left_yx"])]
+    )
     unet_conditions = {"time_ids": add_time_ids}
 
     # Get the text embedding for conditioning.
