@@ -85,7 +85,7 @@ class SdxlLoraAndTextualInversionConfig(BasePipelineConfig):
     optimizer: AdamOptimizerConfig | ProdigyOptimizerConfig = AdamOptimizerConfig()
 
     text_encoder_learning_rate: float | None = 1e-5
-    """The learning rate to use for the text encoder model. Set to null or 0 to use the optimizer's default learning 
+    """The learning rate to use for the text encoder model. Set to null or 0 to use the optimizer's default learning
     rate.
     """
 
