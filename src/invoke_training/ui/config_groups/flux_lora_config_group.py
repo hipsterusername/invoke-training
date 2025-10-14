@@ -314,13 +314,9 @@ class FluxLoraConfigGroup(UIConfigElement):
             new_config.model = safe_pop(self.model, new_config.model)
             new_config.train_transformer = safe_pop(self.train_transformer, new_config.train_transformer)
             new_config.train_text_encoder = safe_pop(self.train_text_encoder, new_config.train_text_encoder)
-            transformer_lr_value = safe_pop(
-                self.transformer_learning_rate, new_config.transformer_learning_rate
-            )
+            transformer_lr_value = safe_pop(self.transformer_learning_rate, new_config.transformer_learning_rate)
             new_config.transformer_learning_rate = None if transformer_lr_value == 0 else transformer_lr_value
-            text_encoder_lr_value = safe_pop(
-                self.text_encoder_learning_rate, new_config.text_encoder_learning_rate
-            )
+            text_encoder_lr_value = safe_pop(self.text_encoder_learning_rate, new_config.text_encoder_learning_rate)
             new_config.text_encoder_learning_rate = None if text_encoder_lr_value == 0 else text_encoder_lr_value
             new_config.gradient_accumulation_steps = safe_pop(
                 self.gradient_accumulation_steps, new_config.gradient_accumulation_steps

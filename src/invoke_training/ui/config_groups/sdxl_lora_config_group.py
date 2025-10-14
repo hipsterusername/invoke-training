@@ -115,7 +115,8 @@ class SdxlLoraConfigGroup(UIConfigElement):
             with gr.Row():
                 self.unet_learning_rate = gr.Number(
                     label="UNet Learning Rate",
-                    info="The UNet learning rate. Set to 0 or leave empty to inherit from the base optimizer learning rate.",
+                    info="The UNet learning rate. Set to 0 or leave empty to inherit from the base optimizer "
+                    "learning rate.",
                     interactive=True,
                 )
                 self.text_encoder_learning_rate = gr.Number(

@@ -147,17 +147,20 @@ class SdxlLoraAndTextualInversionConfigGroup(UIConfigElement):
             with gr.Row():
                 self.unet_learning_rate = gr.Number(
                     label="UNet Learning Rate",
-                    info="The UNet learning rate. Set to 0 or leave empty to inherit from the base optimizer learning rate.",
+                    info="The UNet learning rate. Set to 0 or leave empty to inherit from the base optimizer "
+                    "learning rate.",
                     interactive=True,
                 )
                 self.text_encoder_learning_rate = gr.Number(
                     label="Text Encoder Learning Rate",
-                    info="The text encoder learning rate. Set to 0 or leave empty to inherit from the base optimizer learning rate.",
+                    info="The text encoder learning rate. Set to 0 or leave empty to inherit from the base optimizer "
+                    "learning rate.",
                     interactive=True,
                 )
                 self.textual_inversion_learning_rate = gr.Number(
                     label="Textual Inversion Learning Rate",
-                    info="The textual inversion learning rate. Set to 0 or leave empty to inherit from the base optimizer learning rate.",
+                    info="The textual inversion learning rate. Set to 0 or leave empty to inherit from the base optimizer "
+                    "learning rate.",
                     interactive=True,
                 )
                 self.ti_train_steps_ratio = gr.Number(label="Textual Inversion Train Steps Ratio", interactive=True)

@@ -93,7 +93,8 @@ class SdxlLoraAndTextualInversionConfig(BasePipelineConfig):
     """
 
     textual_inversion_learning_rate: float | None = 1e-3
-    """The learning rate to use for textual inversion training of the embeddings. Set to null or 0 to use the optimizer's default learning rate.
+    """The learning rate to use for textual inversion training of the embeddings. Set to null or 0 to use the
+    optimizer's default learning rate.
     """
 
     lr_scheduler: Literal[
